@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Microservice_B</RootNamespace>
+    <Authors>Vladan Bjelovic</Authors>
+    <Copyright>Copyright © 2023 Vladan Bjelovic</Copyright>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.32" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore">
+      <HintPath>..\lib\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="NC3.Comm.Core.Layer">
+      <HintPath>..\lib\NC3.Comm.Core.Layer.dll</HintPath>
+    </Reference>
+    <Reference Include="NC3.Comm.Core.Layer.Config">
+      <HintPath>..\lib\NC3.Comm.Core.Layer.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="NC3.Comm.Core.Tcp">
+      <HintPath>..\lib\NC3.Comm.Core.Tcp.dll</HintPath>
+    </Reference>
+    <Reference Include="NC3.Comm.Msvc.Events">
+      <HintPath>..\lib\NC3.Comm.Msvc.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="NC3.Microservices.Util.StartOptions">
+      <HintPath>..\lib\NC3.Microservices.Util.StartOptions.dll</HintPath>
+    </Reference>
+    <Reference Include="NC3.Util.DI">
+      <HintPath>..\lib\NC3.Util.DI.dll</HintPath>
+    </Reference>
+    <Reference Include="NCL.Logging.Core">
+      <HintPath>..\lib\NCL.Logging.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
